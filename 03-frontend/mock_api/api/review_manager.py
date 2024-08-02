@@ -9,7 +9,7 @@ review_manager_blueprint = Blueprint('review_manager', __name__)
 data_manager = DataManager()
 
 
-@review_manager_blueprint.route('/places/<place_id>/reviews', methods=['POST'])
+@review_manager_blueprint.route('/place/<place_id>/reviews', methods=['POST'])
 @jwt_required()
 def create_review(place_id):
     user = User.query.get(get_jwt_identity())
@@ -43,7 +43,7 @@ def get_user_reviews(user_id):
     return jsonify([review.to_dict() for review in reviews]), 200
 
 
-@review_manager_blueprint.route('/places/<place_id>/reviews', methods=['GET'])
+@review_manager_blueprint.route('/place/<place_id>/reviews', methods=['GET'])
 def get_place_reviews(place_id):
     reviews = Review.query.filter_by(place_id=place_id).all()
     return jsonify([review.to_dict() for review in reviews]), 200

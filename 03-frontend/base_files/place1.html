@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Details</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" href="imgs/SH.png" type="image/x-imgs/SH">
+</head>
+<body class="place">
+	<header>
+		<a href="index.html" class="login-button">
+			<button>Back</button>
+		</a>
+
+		<a href="index.html">
+			<img src="imgs/SH.png" alt="logo" class="logo">
+		</a>
+		<nav>
+			<a href="login.html" class="login-button">
+				<p>Not logged in?</p>
+				<button>Login</button>
+			</a>
+        </nav>
+	</header>
+    <main>
+        <section id="place-details">
+			<h1>El Beach House</h1>
+			<div class="place-detail">
+				<div class="place-info">
+					<img src="imgs/pr.png" alt="photo">
+					<p><b>Host:</b>  Bryan Garcia</p>
+					<p><b>Price per night:</b>  $150</p>
+					<p><b>Location:</b> Rincon, Puerto Rico</p>
+					<p><b>Description:</b>  Una bella casa con vista al mar, con acceso a la playa.</p>
+					<p><b>Amenities:</b>  WiFi, Aire Acondicionado, Tablas de Surf, Mesa de Billar, Hamacas. </p>
+				</div>
+			</div>
+        </section>
+
+		<h2>Reviews</h2>
+		<section id="reviews">
+            <table id="reviews-table">
+                <thead>
+                    <tr>
+						<p></p>
+                    </tr>
+                </thead>
+                <tbody>
+					<b>Ingrid Santiago:</b>
+					<p>Un lugar bello  lo mejor fue la playa, pude surfear todo el weekend.</p>
+					<p>Rating: ★★★★★</p>
+                </tbody>
+            </table>
+        </section>
+
+		<section id="reviews">
+            <table id="reviews-table">
+                <thead>
+                    <tr>
+                    </tr>
+                </thead>
+                <tbody>
+					<b> Orlando Rivera:</b>
+					<p>Un buen lugar para pasarlo con la familia</p>
+					<p>Rating: ★★★★☆</p>
+                </tbody>
+            </table>
+        </section>
+
+		<h2>Add a Review</h2>
+        <section id="add-review">
+            <form id="review-form">
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" name="review-text" required></textarea>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="1">★☆☆☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="5">★★★★★</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+	<footer>
+        <p>©️ 2024 Hbnb Evolution. All rights reserved</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

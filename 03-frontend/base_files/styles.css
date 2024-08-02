@@ -1,6 +1,6 @@
-/* 
-  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks. 
-  You'll probably need to override some of theese styles.
+/*
+  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks.
+  You'll probably need to override some of these styles.
 */
 
 * {
@@ -11,14 +11,8 @@
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+    background-color: rgb(204, 199, 199);
+    color: #0a0a09;
 }
 
 nav a {
@@ -28,5 +22,151 @@ nav a {
 }
 
 main {
+    display: block; /* Changed from justify to block */
     padding: 2rem;
+    background-color: rgb(204, 199, 199);
+}
+
+footer {
+    display: block;
+    text-align: center;
+    background-color: gold;
+}
+
+section {
+}
+
+header {
+    background-color: #0a0a09;
+    color: #0a0a09;
+    padding: 1rem;
+    text-align: left;
+}
+
+header a {
+    color: gold;
+    float: right;
+}
+
+header h1 {
+    display: inline;
+    background-color: #0a0a09;
+    color: #c9ae19;
+    padding: 1rem;
+    text-align: left;
+}
+
+header img {
+    height: 46px;
+    width: 25px;
+}
+
+header p {
+    height: 46px;
+    width: 25px;
+    display: inline;
+    background-color: #0a0a09;
+    color: #0a0a09;
+    padding: 1rem;
+    text-align: left;
+}
+
+/* Index.html */
+
+#places-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    border: 2px wavy rgb(74, 78, 70); /* Combined border properties */
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #0a0a09;
+    color: #c9ae19;
+    box-shadow: 0 2px 4px 0 rgba(245, 244, 244, 0.2);
+}
+
+#places-list img {
+    width: auto;
+    height: 300px;
+}
+
+#places-list h1 {
+    color: white;
+}
+
+#places-list a {
+    color: #fff;
+}
+
+.login-form {
+    display: inline-block; /* Changed from inline to inline-block */
+    color: #e7e7e7;
+    margin: 2rem;
+    border-radius: 5px;
+    padding: 5rem;
+    border: 1px solid #ccc;
+    background-color: #0a0a09;
+}
+.login-form h1 {
+flex: wrap ;
+justify-content: center;
+}
+.login-form img {
+    display: grid;
+justify-content: center;
+    height: 54px;
+    width: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#filter {
+    color: #0a0a09;
+    text-align: center;
+}
+
+/* Place.html */
+.place-details{
+color:#0a0a09}
+#place-name {
+color: #0a0a09;
+    display: grid;
+justify-content: center;
+
+
+    text-align: justify; /* Changed from align-items to text-align */
+}
+.place-details div {
+display: inline;;
+
+
+}
+#i
+/* login.html */
+
+.login-container {
+    display: grid;
+}
+
+.login-container button {
+    background-color: gold;
+    color: #0a0a09;
+}
+
+.login-container h2 {
+    color: gold;
+}
+
+.login-form {
+    width: auto;
+    height: auto; /* Changed from fill-available to auto */
+    position: relative; /* Corrected the positioning properties */
+    margin: 2rem;
+    border-radius: 5px;
+    padding: 5rem;
+    border: 1px solid #ccc;
+    background-color: #0a0a09;
 }

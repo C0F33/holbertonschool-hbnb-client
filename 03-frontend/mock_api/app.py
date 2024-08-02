@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from db import db
 import os
 from flask_jwt_extended import JWTManager
@@ -9,8 +9,7 @@ from api.place_manager import place_manager_blueprint
 from api.review_manager import review_manager_blueprint
 from flask_migrate import Migrate
 
-app = Flask(__name__)
-
+app = Flask(__name__, template_folder='../base_files',static_folder='../base_files')
 
 class Config(object):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///development.db'
@@ -35,7 +34,8 @@ jwt = JWTManager(app)
 
 @app.route('/')
 def home():
-    return 'Welcome to the holbertonbnb api'
+    return render_template('index.html')
+
 
 
 app.register_blueprint(user_manager_blueprint)

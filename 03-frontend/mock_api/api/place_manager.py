@@ -9,7 +9,7 @@ place_manager_blueprint = Blueprint('place_manager', __name__)
 data_manager = DataManager()
 
 
-@place_manager_blueprint.route('/places', methods=['POST'])
+@place_manager_blueprint.route('/place', methods=['POST'])
 @jwt_required()
 def create_place():
     user = User.query.get(get_jwt_identity())
@@ -42,7 +42,7 @@ def create_place():
     return jsonify(place.to_dict()), 201
 
 
-@place_manager_blueprint.route('/places', methods=['GET'])
+@place_manager_blueprint.route('/place', methods=['GET'])
 @jwt_required()
 def get_places():
     user = User.query.get(get_jwt_identity())
@@ -54,7 +54,7 @@ def get_places():
     return jsonify(places_list), 200
 
 
-@place_manager_blueprint.route('/places/<place_id>', methods=['GET'])
+@place_manager_blueprint.route('/place/<place_id>', methods=['GET'])
 def get_place(place_id):
     place = Place.query.get(place_id)
     if not place:
@@ -62,7 +62,7 @@ def get_place(place_id):
     return jsonify(place.to_dict()), 200
 
 
-@place_manager_blueprint.route('/places/<place_id>', methods=['PUT'])
+@place_manager_blueprint.route('/place/<place_id>', methods=['PUT'])
 @jwt_required()
 def update_place(place_id):
     user = User.query.get(get_jwt_identity())
@@ -89,7 +89,7 @@ def update_place(place_id):
     return jsonify(place.to_dict()), 200
 
 
-@place_manager_blueprint.route('/places/<place_id>', methods=['DELETE'])
+@place_manager_blueprint.route('/place/<place_id>', methods=['DELETE'])
 @jwt_required()
 def delete_place(place_id):
     user = User.query.get(get_jwt_identity())
